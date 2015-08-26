@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/media.css">
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <!--///////////////////NAVBAR/////////////////////-->
+      <nav class="navbar navbar-default navbar-fixed-top"> 
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Music Mash</a>
+            
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+              <li><a href="addSongs.html">Add Songs</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Find Songs">
+              </div>
+              <button type="submit" class="btn btn-default">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="#">Link</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <!-- ///////////////////////////////////////////// -->
+    </header>
+
+
+    <div id="bottom" class="row">
+      <div id="left" class="col-md-12 matchHeight">
+
+        <div id="adding">
+          <!-- <button type="button" id="add" class="btn btn-default center-block">Add Songs</button> -->
+          <div class="form-group" id='addSongsDiv'>
+            <h3>Add Songs</h3>
+            <!-- <input type="file" id="exampleInputFile">
+            <p class="help-block">Upload the audio for your songs</p> -->
+            <input type="text" id='title' placeholder="Title">
+            <input type="text" id='artist' placeholder="Artist">
+            <input type="text" id='album' placeholder="Album">
+            <input type="text" id='year' placeholder="Year">
+            <br>
+            <button type="submit" id="addSongs" class="btn btn-default">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="right"  class="col-md-8 matchHeight container-fluid">
+        <div id="more">
+          <button class="btn btn-default btn-xs">More</button>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> -->
+  <!-- <script type="text/javascript" src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script> -->
+  <script data-main="javascripts/main" src="./bower_components/requirejs/require.js"></script>
+  <!-- <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+</body>
+</html>

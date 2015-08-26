@@ -1,0 +1,22 @@
+/*@media only screen and (max-width: 500px) {
+    #bottom
+    {
+      flex-wrap: wrap;
+    }
+    #left
+    {
+      width: 100%;
+    }
+    #right
+    {
+      /
+    }
+}
+*/
+
+
+
+/*@media (min-width: 850px)
+.navbar-fixed-bottom, .navbar-fixed-top {
+    border-radius: 0;
+}*/

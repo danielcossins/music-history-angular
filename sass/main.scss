@@ -1,0 +1,130 @@
+$font-stack:    Helvetica, sans-serif;
+$color1: #e7e7e7;
+$left: #4DD7FA;
+$odd: #F5FFFA;
+$even: #FFF5EE;
+$default-navbar-background-color: #f8f8f8;
+$default-navbar-border-color: #e7e7e7;
+$pinkish: #FFB4B0;
+
+/*# sourceMappingURL=main.css.map */
+
+.navbar-default {
+  background-color: $pinkish;
+  border-color: black;
+}
+
+#left
+{
+  // border: 2px solid black;
+  background-color: $left ;
+  // width: 200px;
+  // margin: 5px;
+  // padding: 10px;
+  // min-width: 187px;
+  font-family: Arial;
+  // width: 100%;
+
+  select
+  {
+    width: 90%;
+    /*outline: 2px solid black;*/
+  }
+
+  #addSongsDiv{
+    // display: none;
+    background-color: $left;
+  }
+
+  #adding{
+    width: 100%;
+    background-color: $color1;
+  }
+}
+
+#right
+{
+  // border: 2px solid black;
+  background-color: $color1;
+  // width: 615px;
+  // width: 100%;
+  // min-width: 150px;
+  // margin: 5px;
+  padding: 0px;
+  // width: 100%;
+
+  .large
+  {
+    margin-left: 40px;
+    font-size: 1.5em;
+    font-family: Arial;
+    color: #785616;
+  }
+
+  // div li
+  // {
+  //   display: inline;
+  //   padding: 3px;
+  // }
+
+  // div li.middle
+  // {
+  //   border-right: 2px solid black;
+  //   border-left: 2px solid black;
+  //   padding-left: 10px;
+  //   padding-right: 10px;
+  // }
+  div li{
+    list-style: none;
+  }
+
+  // div:nth-child(2n+0)
+  // {
+  //   background-color: $odd;
+  //   /*background-color:#7AC5CD;*/
+  // }
+  // div:nth-child(2n+1)
+  // {
+  //   background-color: $even;
+  //   /*background-color: #EE3B3B;*/
+  // }
+  div.cont{
+    background-color: $even;
+    border-top: 2px solid black;
+    // border-bottom: 2px solid black;
+  }
+
+  .cont:first-child
+  {
+    font-weight: bold;
+    // background-color: blue;
+    // width: 100%;
+  }
+  // .cont#more{
+  //   background-color: $color1;
+  //   padding: 5px;
+  // }
+  #more{
+    background-color: $color1;
+    margin-left: 3%;
+    padding: 5px;
+  }
+  .delete{
+    margin-left: 3%;
+  }
+}
+
+#bottom
+{
+  margin-top: 55px;
+  // display: flex;
+}
+
+// .cont {
+//   -webkit-transition: all 1s ease-in-out;
+//   -moz-transition: all 1s ease-in-out;
+//   -o-transition: all 1s ease-in-out;
+//   transition: all 1s ease-in-out;
+// }
+
+@import 'slide';
