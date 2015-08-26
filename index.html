@@ -10,7 +10,7 @@
 </head>
 
 <body ng-app="MusicApp">
-  <div id="main">
+  <div id="main" ng-controller="SongCtrl">
     <header>
       <!--///////////////////NAVBAR/////////////////////-->
       <nav class="navbar navbar-default navbar-fixed-top"> 
@@ -47,9 +47,9 @@
             </ul>
             <form class="navbar-form navbar-left" role="search">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Find Songs">
+                <input type="text" class="form-control" placeholder="Find Songs" ng-model="songSearchText">
               </div>
-              <button type="submit" class="btn btn-default">Search</button>
+              <!-- <button type="submit" class="btn btn-default">Search</button> -->
             </form>
             <ul class="nav navbar-nav navbar-right">
               <!-- <li><a href="#">Link</a></li> -->
@@ -74,7 +74,7 @@
     <div id="bottom" class="row">
       <div id="left" class="col-md-4 matchHeight">
         <form>
-          <div id="artistSelect">
+          <!-- <div id="artistSelect">
             Song Length:
             <input id="range" type="range">
             <br>
@@ -94,10 +94,16 @@
             <br>
             Genre:
             <br>
-          </div>
+          </div> -->
 
           <div id="albumSelect">
+            <select ng-model="theSongs" ng-options="value.name group by value.artist for value in songs">
+              <option>--</option>
+            </select>
 
+            <select ng-model="theSongs" ng-options="value.name group by value.album for value in songs">
+              <option>--</option>
+            </select>
           </div>
 
           <div>
@@ -144,7 +150,7 @@
         </form>
       </div>
 
-      <div ng-controller="SongCtrl" id="right"  class="col-md-8 matchHeight container-fluid">
+      <div id="right"  class="col-md-8 matchHeight container-fluid">
         <!-- <div>
           <ul class="song-list" ng-repeat="key in songs">
             <li>{{key.name}}</li>
@@ -153,11 +159,11 @@
             <li>{{key.year}}</li>
           </ul>
         </div> -->
-        <div class='cont' ng-repeat="key in songs">
-          <p class='large' class='song'>{{key.name}}</p>
+        <div class='cont' ng-repeat="key in songs | filter: songSearchText">
+          <p class='large' class='song'>{{key.name | capitalize}}</p>
           <ul>
-            <li class='artist'>Artist: {{key.artist}}</li>
-            <li class='middle album'>Album: {{key.album}}</li>
+            <li class='artist'>Artist: {{key.artist|capitalize}}</li>
+            <li class='middle album'>Album: {{key.album|capitalize}}</li>
             <li class='year'>Year: {{key.year}}</li>
           </ul>
           <button type='button' class='btn btn-default btn-sm delete'>Delete</button>
@@ -177,5 +183,6 @@
   <!-- <script src="lib/bower_components/matchHeight/jquery.matchHeight-min.js"></script> -->
   <script src="app/app.js"></script>
   <script src="app/controllers/songs.js"></script>
+  <script src="app/filters/capitalize.js"></script>
 </body>
 </html>
