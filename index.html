@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Nashville Software School</title>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
 </head>
@@ -75,7 +75,7 @@
       <div id="left" class="col-md-4 matchHeight">
         <form>
           <div id="artistSelect">
-            <!-- Song Length:
+            Song Length:
             <input id="range" type="range">
             <br>
             Artist:
@@ -93,7 +93,7 @@
             <br>
             <br>
             Genre:
-            <br> -->
+            <br>
           </div>
 
           <div id="albumSelect">
@@ -142,21 +142,6 @@
           </div>
           <button type="button" id="filter" class="btn btn-default center-block">Filter</button>
         </form>
-
-        <!-- <div id="adding">
-          <button type="button" id="add" class="btn btn-default center-block">Add Songs</button>
-          <div class="form-group" id='addSongs'>
-            <h3>Add Songs</h3>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Upload the audio for your songs</p>
-            <input type="text" id='title' placeholder="Title">
-            <input type="text" id='artist' placeholder="Artist">
-            <input type="text" id='album' placeholder="Album">
-            <input type="text" id='year' placeholder="Year">
-            <br>
-            <button type="submit" id="addSongs" class="btn btn-default">Add</button>
-          </div>
-        </div> -->
       </div>
 
       <div id="right"  class="col-md-8 matchHeight container-fluid"> <!--class="fluid-container"-->
@@ -166,9 +151,12 @@
       </div>
     </div>
   </div>
-  <!-- <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script> -->
-  <script data-main="javascripts/main" src="./bower_components/requirejs/require.js"></script>
-  <!-- <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <!-- <script src="lib/bower_components/lodash/lodash.min"></script>
+  <script src="lib/bower_components/firebase/firebase"></script> -->
+  <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="lib/bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+  <script src="app/app.js"></script>
 </body>
 </html>
