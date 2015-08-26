@@ -1,9 +1,4 @@
 app.controller("SongCtrl", function($scope, $q) {
-  $scope.songs = [
-    { "name": "Mow the lawn", "complete": false },
-    { "name": "Cut the grass", "complete": false },
-    { "name": "Trim the weeds", "complete": false }
-  ];
 
   $scope.killSong = function(song) {
     var songIndex = $scope.songs.indexOf(song);
@@ -27,10 +22,10 @@ app.controller("SongCtrl", function($scope, $q) {
   function getSongList(){
     return $q(function(resolve, reject){
       $.ajax({
-        url: "./data/songs.json"
+        url: "../data/songs.json"
       })
       .done(function(response){
-        resolve(response.todos);
+        resolve(response.songs);
       })
       .fail(function(xhr, status, error){
         reject(error);

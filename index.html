@@ -145,14 +145,24 @@
       </div>
 
       <div ng-controller="SongCtrl" id="right"  class="col-md-8 matchHeight container-fluid">
-        <div>
+        <!-- <div>
           <ul class="song-list" ng-repeat="key in songs">
             <li>{{key.name}}</li>
             <li>{{key.artist}}</li>
             <li>{{key.album}}</li>
             <li>{{key.year}}</li>
           </ul>
+        </div> -->
+        <div class='cont' ng-repeat="key in songs">
+          <p class='large' class='song'>{{key.name}}</p>
+          <ul>
+            <li class='artist'>Artist: {{key.artist}}</li>
+            <li class='middle album'>Album: {{key.album}}</li>
+            <li class='year'>Year: {{key.year}}</li>
+          </ul>
+          <button type='button' class='btn btn-default btn-sm delete'>Delete</button>
         </div>
+
         <div id="more">
           <button class="btn btn-default btn-xs">More</button>
         </div>
