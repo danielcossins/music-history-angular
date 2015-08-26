@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="styles/media.css">
 </head>
 
-<body>
+<body ng-app="MusicApp">
   <div id="main">
     <header>
       <!--///////////////////NAVBAR/////////////////////-->
@@ -144,7 +144,15 @@
         </form>
       </div>
 
-      <div id="right"  class="col-md-8 matchHeight container-fluid"> <!--class="fluid-container"-->
+      <div ng-controller="SongCtrl" id="right"  class="col-md-8 matchHeight container-fluid">
+        <div>
+          <ul class="song-list" ng-repeat="key in songs">
+            <li>{{key.name}}</li>
+            <li>{{key.artist}}</li>
+            <li>{{key.album}}</li>
+            <li>{{key.year}}</li>
+          </ul>
+        </div>
         <div id="more">
           <button class="btn btn-default btn-xs">More</button>
         </div>
@@ -156,7 +164,8 @@
   <!-- <script src="lib/bower_components/lodash/lodash.min"></script>
   <script src="lib/bower_components/firebase/firebase"></script> -->
   <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="lib/bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+  <!-- <script src="lib/bower_components/matchHeight/jquery.matchHeight-min.js"></script> -->
   <script src="app/app.js"></script>
+  <script src="app/controllers/songs.js"></script>
 </body>
 </html>
