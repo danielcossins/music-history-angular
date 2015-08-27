@@ -7,10 +7,10 @@ app.config(['$routeProvider',
       templateUrl: './partials/song-list.html',
       controller: 'SongCtrl'
     }).
-    // when('/songs/:songId', {
-    //   templateUrl: './partials/song-detail.html',
-    //   controller: 'SongDetailCtrl'
-    // }).
+    when('/songs/:songId', {
+      templateUrl: './partials/song-detail.html',
+      controller: 'SongDetailCtrl'
+    }).
     otherwise({
       redirectTo: '/songs'
     });

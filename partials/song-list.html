@@ -1,5 +1,5 @@
 <div class='cont' ng-repeat="key in songs | filter: songSearchText">
-  <p class='large' class='song'>{{key.name | capitalize}}</p>
+  <a href="{{'/#/songs/'+key.songId}}"><p class='large' class='song'>{{key.name | capitalize}}</p></a>
   <ul>
     <li class='artist'>Artist: {{key.artist|capitalize}}</li>
     <li class='middle album'>Album: {{key.album|capitalize}}</li>
