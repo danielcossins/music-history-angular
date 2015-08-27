@@ -150,16 +150,8 @@
         </form>
       </div>
 
-      <div id="right"  class="col-md-8 matchHeight container-fluid">
-        <!-- <div>
-          <ul class="song-list" ng-repeat="key in songs">
-            <li>{{key.name}}</li>
-            <li>{{key.artist}}</li>
-            <li>{{key.album}}</li>
-            <li>{{key.year}}</li>
-          </ul>
-        </div> -->
-        <div class='cont' ng-repeat="key in songs | filter: songSearchText">
+      <div ng-view id="right"  class="col-md-8 matchHeight container-fluid">
+        <!-- <div class='cont' ng-repeat="key in songs | filter: songSearchText">
           <p class='large' class='song'>{{key.name | capitalize}}</p>
           <ul>
             <li class='artist'>Artist: {{key.artist|capitalize}}</li>
@@ -171,12 +163,13 @@
 
         <div id="more">
           <button class="btn btn-default btn-xs">More</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.js"></script>
   <!-- <script src="lib/bower_components/lodash/lodash.min"></script>
   <script src="lib/bower_components/firebase/firebase"></script> -->
   <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

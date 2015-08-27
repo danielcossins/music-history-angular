@@ -1,0 +1,13 @@
+<div class='cont' ng-repeat="key in songs | filter: songSearchText">
+  <p class='large' class='song'>{{key.name | capitalize}}</p>
+  <ul>
+    <li class='artist'>Artist: {{key.artist|capitalize}}</li>
+    <li class='middle album'>Album: {{key.album|capitalize}}</li>
+    <li class='year'>Year: {{key.year}}</li>
+  </ul>
+  <button type='button' class='btn btn-default btn-sm delete'>Delete</button>
+</div>
+
+<div id="more">
+  <button class="btn btn-default btn-xs">More</button>
+</div>
