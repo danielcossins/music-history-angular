@@ -1,4 +1,5 @@
-app.controller("SongCtrl", function($scope, $q) {
+app.controller("SongCtrl", ["$scope", "getSongs", 
+  function($scope, getSongs) {
 
   $scope.killSong = function(song) {
     var songIndex = $scope.songs.indexOf(song);
@@ -12,31 +13,10 @@ app.controller("SongCtrl", function($scope, $q) {
     $scope.newTodo = "";
   };
 
-
-
-
-
-
-
-
-  function getSongList(){
-    return $q(function(resolve, reject){
-      $.ajax({
-        url: "../data/songs.json"
-      })
-      .done(function(response){
-        resolve(response.songs);
-      })
-      .fail(function(xhr, status, error){
-        reject(error);
-      });
-    });
-  }
-
-  getSongList()
+  getSongs
   .then(function(data){
     $scope.songs = data;
   },function(error){
     console.log(error);
   });
-});
+}]);
