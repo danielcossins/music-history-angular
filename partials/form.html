@@ -1,0 +1,53 @@
+<form>
+  <div id="albumSelect">
+    <select ng-model="theSongs" ng-options="value.name group by value.artist for value in songs">
+      <option>--</option>
+    </select>
+
+    <select ng-model="theSongs" ng-options="value.name group by value.album for value in songs">
+      <option>--</option>
+    </select>
+  </div>
+
+  <div>
+    <table class="table">
+      <tr>
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> Rock
+        </label>
+        </td>
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> Classical
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> Pop
+          </label>
+        </td>
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option4"> Jazz
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option5"> Blues
+          </label>
+        </td>
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option6"> Hip hop
+          </label>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button type="button" id="filter" class="btn btn-default center-block">Filter</button>
+</form>

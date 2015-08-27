@@ -10,7 +10,7 @@
 </head>
 
 <body ng-app="MusicApp">
-  <div id="main" ng-controller="SongCtrl">
+  <div id="main">
     <header>
       <!--///////////////////NAVBAR/////////////////////-->
       <nav class="navbar navbar-default navbar-fixed-top"> 
@@ -72,104 +72,20 @@
 
 
     <div id="bottom" class="row">
-      <div id="left" class="col-md-4 matchHeight">
-        <form>
-          <!-- <div id="artistSelect">
-            Song Length:
-            <input id="range" type="range">
-            <br>
-            Artist:
-            <br>
-            <select id="artist" placeholder="options">
-              <option>Options</option>
-            </select>
-            <br>
-            <br>
-            Album:
-            <br>
-            <select id="album" placeholder="options">
-              <option>Options</option>
-            </select>
-            <br>
-            <br>
-            Genre:
-            <br>
-          </div> -->
-
-          <div id="albumSelect">
-            <select ng-model="theSongs" ng-options="value.name group by value.artist for value in songs">
-              <option>--</option>
-            </select>
-
-            <select ng-model="theSongs" ng-options="value.name group by value.album for value in songs">
-              <option>--</option>
-            </select>
-          </div>
-
-          <div>
-            <table class="table">
-              <tr>
-                <td>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Rock
-                </label>
-                </td>
-                <td>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Classical
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Pop
-                  </label>
-                </td>
-                <td>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox1" value="option4"> Jazz
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox2" value="option5"> Blues
-                  </label>
-                </td>
-                <td>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option6"> Hip hop
-                  </label>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <button type="button" id="filter" class="btn btn-default center-block">Filter</button>
-        </form>
+      <div id="left" class="col-md-4 matchHeight" ng-include="template.url">
+        
       </div>
 
-      <div ng-view id="right"  class="col-md-8 matchHeight container-fluid">
-        <!-- <div class='cont' ng-repeat="key in songs | filter: songSearchText">
-          <p class='large' class='song'>{{key.name | capitalize}}</p>
-          <ul>
-            <li class='artist'>Artist: {{key.artist|capitalize}}</li>
-            <li class='middle album'>Album: {{key.album|capitalize}}</li>
-            <li class='year'>Year: {{key.year}}</li>
-          </ul>
-          <button type='button' class='btn btn-default btn-sm delete'>Delete</button>
-        </div>
-
-        <div id="more">
-          <button class="btn btn-default btn-xs">More</button>
-        </div> -->
+      <div  ng-controller="SongCtrl" ng-view id="right"  class="col-md-8 matchHeight container-fluid">
+        
       </div>
     </div>
   </div>
   <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="lib/bower_components/angular/angular.min.js"></script>
   <script src="lib/bower_components/angular-route/angular-route.js"></script>
+  <script src="lib/bower_components/firebase/firebase.js"></script>
+  <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
   <!-- <script src="lib/bower_components/lodash/lodash.min"></script>
   <script src="lib/bower_components/firebase/firebase"></script> -->
   <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
