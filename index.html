@@ -72,7 +72,7 @@
 
 
     <div id="bottom" class="row">
-      <div id="left" class="col-md-4 matchHeight" ng-include="template.url">
+      <div ng-controller="FormCtrl" id="left" class="col-md-4 matchHeight" ng-include="templates.url">
         
       </div>
 
@@ -93,6 +93,7 @@
   <script src="app/app.js"></script>
   <script src="app/controllers/songs.js"></script>
   <script src="app/controllers/each-song.js"></script>
+  <script src="app/controllers/form.js"></script>
   <script src="app/factories/getSongs.js"></script>
   <script src="app/filters/capitalize.js"></script>
 </body>
