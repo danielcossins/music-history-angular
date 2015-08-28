@@ -24,10 +24,12 @@ app.controller("SongCtrl", ["$scope", "getSongs",
     $scope.newTodo = "";
   };
 
-  getSongs
-  .then(function(data){
-    $scope.songs = data;
-  },function(error){
-    console.log(error);
-  });
+  // getSongs
+  // .then(function(data){
+  //   $scope.songs = data;
+  // },function(error){
+  //   console.log(error);
+  // });
+  $scope.songs=getSongs;
+  console.log($scope.songs);
 }]);
