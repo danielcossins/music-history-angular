@@ -2,9 +2,9 @@ define(function (require) {
   'use strict';
 
   var angular = require('angular');
-  var services = require('./services/services');
-  var controllers = require('./controllers/controllers');
-  var directives = require('./directives/directives');
+  // var services = require('./services/services');
+  var controllers = require('./controllers/songs');
+  // var directives = require('./directives/directives');
 
   var app = angular.module('likeastore', ['services', 'controllers', 'directives']);
 

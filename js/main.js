@@ -47,8 +47,8 @@ require(['app'], function (app) {
   app.init();
 });
 
-var app = angular.module('likeastore', ['services', 'controllers', 'directives']);
+// var app = angular.module('likeastore', ['services', 'controllers', 'directives']);
 
-app.init = function () {
-  angular.bootstrap(document, ['likeastore']);
-};
+// app.init = function () {
+//   angular.bootstrap(document, ['likeastore']);
+// };
