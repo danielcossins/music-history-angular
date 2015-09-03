@@ -1,5 +1,16 @@
-define(function(require){
-  app.controller("SongCtrl", ["$scope", "getSongs",
+'use strict';
+define([
+  'angular',
+  'ngRoute'
+], function(angular) {
+  angular.module('MusicApp.view1', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/', {
+      templateUrl: '../../paritals/song-list',
+      controller: 'SongCtrl'
+    });
+  }])
+  .controller('SongCtrl', ["$scope", "getSongs",
     function($scope, getSongs) {
 
     $scope.killSong = function(song) {
@@ -18,4 +29,3 @@ define(function(require){
     console.log($scope.songs);
   }]);
 });
-

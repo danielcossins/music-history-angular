@@ -1,51 +1,48 @@
 require.config({
   paths: {
-      'angular' : '../../lib/bower_components/angular/angular',
-      // 'ngResource': '../../lib/bower_components/angular-resource/angular-resource',
-      // 'ngCookies': '../../lib/bower_components/angular-cookies/angular-cookies',
-      // 'ngProgressLite': '../../lib/bower_components/ngprogress-lite/ngprogress-lite',
-
-
-
-
-    'jquery': '../../lib/bower_components/jquery/dist/jquery.min',
-    'lodash': '../../lib/bower_components/lodash/lodash.min',
-    'firebase': '../../lib/bower_components/firebase/firebase',
-    'hbs': '../../lib/bower_components/require-handlebars-plugin/hbs',
-    'bootstrap': '../../lib/bower_components/bootstrap/dist/js/bootstrap.min',
-    'q': '../../lib/bower_components/q/q',
-    'matchHeight': '../../lib/bower_components/matchHeight/jquery.matchHeight-min',
-    'es6': '../../lib/bower_components/requirejs-babel/es6',
-    'babel': '../../lib/bower_components/requirejs-babel/babel-5.8.22.min'
+      'angular' : '../lib/bower_components/angular/angular.min',
+      'ngRoute' : '../lib/bower_components/angular-route/angular-route',
+      'jquery': '../lib/bower_components/jquery/dist/jquery.min',
+      'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
+      'firebase': '../lib/bower_components/firebase/firebase',
+      'angularfire': '../lib/bower_components/angularfire/dist/angularfire'
   },
   shim: {
-      ngResource: {
-          deps: ['angular'],
-          exports: 'angular'
-      },
-      ngCookies: {
-          deps: ['angular'],
-          exports: 'angular'
-      },
-      ngProgress: {
-          deps: ['angular'],
-          exports: 'angular'
-      },
-      angular: {
-          exports : 'angular'
-      },
-      'bootstrap': ['jquery'],
-      'matchHeight': ['jquery'],
-      'firebase': {
-        exports: 'Firebase'
-      }
+    'angular': {
+      exports : 'angular'
+    },
+    'ngRoute': {
+        deps: ['angular']
+    },
+    'angularfilter': {
+        deps: ['angular']
+    },
+    'bootstrap': ['jquery'],
+    'firebase': {
+      exports: 'Firebase'
+    },
+    'angularfire': {
+      deps: ['angular', 'firebase'],
+      exports: 'angularfire'
+    }
   },
-  baseUrl: '/js'
+  priority: [
+    "angular"
+  ],
+  baseUrl: './js'
 });
 
-require(['app'], function (app) {
-  app.init();
-});
+require([
+  'angular',
+  'app'
+  ], function(angular, app) {
+  var $html = angular.element(document.getElementsByTagName('body')[0]);
+      angular.element($html).ready(function() {
+        // bootstrap the app manually
+        angular.bootstrap(document, ['MusicApp']);
+    });
+  }
+);
 
 // var app = angular.module('likeastore', ['services', 'controllers', 'directives']);
 
