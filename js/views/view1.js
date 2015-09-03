@@ -1,6 +1,7 @@
 'use strict';
 define([
   'angular',
+  'angularfire',
   'ngRoute'
 ], function(angular) {
   angular.module('MusicApp.view1', ['ngRoute'])
@@ -10,8 +11,13 @@ define([
       controller: 'SongCtrl'
     });
   }])
-  .controller('SongCtrl', ["$scope", "getSongs",
-    function($scope, getSongs) {
+  .controller('SongCtrl', ["$scope", "$firebaseArray", "getSongs",
+    function($scope, $firebaseArray, getSongs) {
+    
+    var ref = new Firebase("https://flickering-fire-4801.firebaseio.com/songs"); 
+
+    // Data from firebase 
+    $scope.songs = $firebaseArray(ref);
 
     $scope.killSong = function(song) {
       var songIndex = $scope.songs.indexOf(song);
@@ -20,12 +26,10 @@ define([
       }
     };
 
-    $scope.addSongs = function() {
-      $scope.todos.push({name: $scope.newTodo, complete: false});
-      $scope.newTodo = "";
-    };
+    // $scope.addSongs = function() {
+    //   $scope.todos.push({name: $scope.newTodo, complete: false});
+    //   $scope.newTodo = "";
+    // };
 
-    $scope.songs=getSongs;
-    console.log($scope.songs);
   }]);
 });
