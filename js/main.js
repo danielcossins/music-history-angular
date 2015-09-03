@@ -1,9 +1,9 @@
 require.config({
   paths: {
-      'angular' : '../components/angular/angular',
-      'ngResource': '../components/angular-resource/angular-resource',
-      'ngCookies': '../components/angular-cookies/angular-cookies',
-      'ngProgressLite': '../components/ngprogress-lite/ngprogress-lite',
+      'angular' : './lib/bower_components/angular/angular',
+      'ngResource': './lib/bower_components/angular-resource/angular-resource',
+      'ngCookies': './lib/bower_components/angular-cookies/angular-cookies',
+      'ngProgressLite': './lib/bower_components/ngprogress-lite/ngprogress-lite',
 
 
 
