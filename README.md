@@ -1,5 +1,5 @@
 # music-history-angular
-This app is for storing and adding songs.
+This app is for storing and adding songs. This is the third version of music-history, implemented with angular.
 
 #Usage
 Follow these instructions:
